@@ -40,3 +40,12 @@
 .read-the-docs {
   color: #888;
 }
+
+/* Personal Corner */
+.result_table {
+  border-collapse: collapse;
+}
+.result_table td {
+  padding: 0.3em;
+  border: 1px solid white;
+}

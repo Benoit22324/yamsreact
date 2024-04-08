@@ -1,4 +1,5 @@
 import { useDiceContext } from '../../utils/DiceContext.jsx'
+import { NavLink } from 'react-router-dom'
 
 const Home = () => {
     const [state, dispatch] = useDiceContext();
@@ -21,16 +22,12 @@ const Home = () => {
         dispatch({type: 'addresult'})
     }
 
-    const result = () => {
-        console.log(state.result)
-    }
-
     return <>
         <label>Expérience:
             <input type="text" name="experience" value={state.exp} onChange={updatevalue} placeholder='Veuilez saisir le nombre de lancer'/>
         </label>
         <button onClick={roll}>Lancer</button>
-        <button onClick={result}>Résultat</button>
+        <NavLink to={'/results'}>Résultat</NavLink>
     </>
 }
 
