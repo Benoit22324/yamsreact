@@ -86,10 +86,22 @@
   background-color: #646464;
 }
 
+.errormsg {
+  color: rgb(204, 0, 0);
+}
+
 .result_table {
   border-collapse: collapse;
 }
 .result_table td {
   padding: 0.3em;
   border: 1px solid white;
+}
+.result_table tr {
+  background-color: #4b4b4b;
+}
+.result_table thead,
+.result_table tr:last-child {
+  background-color: #363636;
+  font-weight: bold;
 }
