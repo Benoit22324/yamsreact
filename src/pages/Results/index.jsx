@@ -16,6 +16,7 @@ const Results = () => {
                     {
                         state.result.map((roll) => <tr> <td>{roll.exp}</td> <td>{roll.brelan}</td> </tr>)
                     }
+                    <tr> <td>Total</td> <td>{state.total}</td> </tr>
                 </tbody>
             </table>
             :

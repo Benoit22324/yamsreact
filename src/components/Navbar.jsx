@@ -2,9 +2,9 @@ import { NavLink } from 'react-router-dom'
 
 const Navbar = () => {
     return <>
-        <nav>
-            <NavLink to={'/'}>Acceuil</NavLink>
-            <NavLink to={'/rules'}>Règle</NavLink>
+        <nav className='nav_bar'>
+            <NavLink to={'/'} style={({isActive}) => isActive ? {color: 'orange', fontWeight: 'bold'} : {}}>Acceuil</NavLink>
+            <NavLink to={'/rules'} style={({isActive}) => isActive ? {color: 'orange', fontWeight: 'bold'} : {}}>Règle</NavLink>
         </nav>
     </>
 }

@@ -9,7 +9,7 @@ const Home = () => {
     }
 
     const rngroll = () => {
-        return Math.floor(Math.random() * 6);
+        return Math.floor(Math.random() * 6) + 1;
     }
 
     const roll = () => {
@@ -23,11 +23,15 @@ const Home = () => {
     }
 
     return <>
-        <label>Expérience:
-            <input type="text" name="experience" value={state.exp} onChange={updatevalue} placeholder='Veuilez saisir le nombre de lancer'/>
-        </label>
-        <button onClick={roll}>Lancer</button>
-        <NavLink to={'/results'}>Résultat</NavLink>
+        <div className='home'>
+            <div className='game_form'>
+                <label>Expérience:
+                    <input type="text" name="experience" value={state.exp} onChange={updatevalue} placeholder='Veuilez saisir le nombre de lancer'/>
+                </label>
+                <button className='game_button' onClick={roll}>Lancer</button>
+            </div>
+            <NavLink to={'/results'} className={'result_button'}>Résultat</NavLink>
+        </div>
     </>
 }
 

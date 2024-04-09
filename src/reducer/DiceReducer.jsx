@@ -1,6 +1,7 @@
 export const init = {
     exp: '',
     brelan: 0,
+    total: 0,
     result: [],
 }
 
@@ -14,6 +15,7 @@ const DiceReducer = (state, action) => {
         case 'addresult': return {
             ...state,
             result: [...state.result, {exp: state.exp, brelan: state.brelan}],
+            total: state.brelan,
             brelan: 0,
             exp: '',
         }
