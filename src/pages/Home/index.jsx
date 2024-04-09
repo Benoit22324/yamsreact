@@ -22,7 +22,7 @@ const Home = () => {
             }
             dispatch({type: 'addresult'})
         }
-        else if (state.exp.trim() === '') dispatch({type: 'adderr', payload: 'Veuillez saisir le nombre d\'expérience'})
+        else if (state.exp.trim() === '') dispatch({type: 'adderr', payload: 'Veuillez saisir le nombre de lancer'})
         else if (state.exp.trim() === '0') dispatch({type: 'adderr', payload: 'Veuillez saisir un chiffre supérieur à 0'})
     }
 
@@ -33,7 +33,7 @@ const Home = () => {
                     state.errmsg !== '' && <p className='errormsg'>{state.errmsg}</p>
                 }
                 <label>Expérience:
-                    <input type="text" name="experience" value={state.exp} onChange={updatevalue} placeholder='Veuilez saisir le nombre de lancer'/>
+                    <input type="text" name="experience" value={state.exp} onChange={updatevalue} placeholder='Nombre de lancer'/>
                 </label>
                 <button className='game_button' onClick={roll}>Lancer</button>
             </div>
